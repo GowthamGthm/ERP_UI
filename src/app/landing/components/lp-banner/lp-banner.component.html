@@ -1,0 +1,9 @@
+<ngu-carousel #landingBanners [inputs]="carouselBanner" (onMove)="onMoveBanner($event)" [dataSource]="bannerItems">
+  <ngu-item NguCarouselItem *nguCarouselDef="let banner; let i = index" class="bannerStyle">
+    <a href="{{banner.link_url}}">
+      <img src={{banner.image_link}} alt="" style="display: block; width: 100%;">
+    </a>
+  </ngu-item>
+  <button NguCarouselPrev class='leftRs'></button>
+  <button NguCarouselNext class='rightRs'></button>
+</ngu-carousel>
